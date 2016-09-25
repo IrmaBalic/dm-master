@@ -1,0 +1,7 @@
+$("#z_val").empty();
+$("#xs_val").empty();
+$("#z_val").append("<%= @z %>");
+<% @xs.each_with_index do |xs, index| %>
+	$("#xs_val").append("x<sub><%= index+1 %></sub>: <%= xs[0] %>, s<sub><%= index+1 %></sub>: <%= xs[1] %>;    ");
+<% end %>
+$("#solution").removeClass("hide");
